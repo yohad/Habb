@@ -39,7 +39,11 @@ packages:
 - .
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
-extra-deps: []
+extra-deps:
+- wx-0.92.3.0
+- wxcore-0.92.3.0
+- wxc-0.92.3.0
+- wxdirect-0.92.3.0
 
 # Override default flag values for local packages and extra-deps
 flags: {}
@@ -64,3 +68,14 @@ extra-package-dbs: []
 #
 # Allow a newer minor version of GHC than the snapshot specifies
 # compiler-check: newer-minor
+
+nix:
+    enable: true
+    pure: true
+    packages:
+    - ncurses
+    - wxGTK30
+    - mesa_noglu
+    - xlibs.libX11.dev
+    - xlibs.xproto.out
+#    shell-file: shell.nix
