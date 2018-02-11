@@ -1,4 +1,4 @@
-resolver: lts-9.14
+resolver: lts-10.4
 
 packages:
 - .
@@ -13,6 +13,8 @@ extra-deps:
   - grapefruit-records-0.1.0.7
   - Stream-0.4.7.2
   - lazysmallcheck-0.6
+  - gtk3-0.14.8
+  - gio-0.13.4.1
 
 flags: {}
 
@@ -20,13 +22,3 @@ extra-package-dbs: []
 # Extra directories used by stack for building
 # extra-include-dirs: [/path/to/dir]
 # extra-lib-dirs: [/path/to/dir]
-
-nix:
-    enable: true
-    pure: true
-    packages:
-    - ncurses
-    - pkgconfig
-    - gnome3.gtk
-    - xorg.libX11
-    - xorg.xproto
